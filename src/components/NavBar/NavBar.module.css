@@ -1,29 +1,35 @@
 .navContainer {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  background-color: #edf2f4;
+  justify-content: space-around;
+  background: linear-gradient(to right, #2b2d42, #8d99ae);
+}
+
+.profileImg{
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 15px;
 }
 
 .nameContainer {
   display: flex;
   align-items: center;
-  margin-left: 15px;
-  color: #2b2d42;
+  color: #edf2f4;
   font-weight: bolder;
-  font-size: 18px;
+  font-size: 24px;
 }
 
 .linksContainer {
   display: flex;
   align-items: center;
-  margin-right: 15px;
-  color: #2b2d42;
-  font-size: 18px;
+  color: #edf2f4;
+  font-size: 24px;
   font-weight: bolder;
 }
 
 .linksContainer ul:hover{
-  color: #ef233c;
+  color: #f7b801;
   cursor: pointer;
 }

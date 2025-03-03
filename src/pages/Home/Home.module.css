@@ -1,7 +1,37 @@
 .container {
   display: flex;
-  align-items: center;
   flex-direction: column;
-  background-color: #edf2f4;
+  align-items: center;
+  justify-content: center;
   min-height: 100vh;
+  background: linear-gradient(to right, #2b2d42, #8d99ae);
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+}
+
+.xWing {
+  position: absolute;
+  top: 40%;
+  height: 350px;
+}
+
+.name {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #edf2f4;
+  background-color: #818a9a;
+  border-radius: 15px;
+  padding: 0 15px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.summary {
+  font-size: 5.5rem;
+  opacity: 0.9;
+  color: #edf2f4;
+}
+
+span {
+  color: #f7b801;
 }
