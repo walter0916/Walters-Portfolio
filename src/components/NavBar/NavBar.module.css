@@ -1,0 +1,29 @@
+.navContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #edf2f4;
+}
+
+.nameContainer {
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+  color: #2b2d42;
+  font-weight: bolder;
+  font-size: 18px;
+}
+
+.linksContainer {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+  color: #2b2d42;
+  font-size: 18px;
+  font-weight: bolder;
+}
+
+.linksContainer ul:hover{
+  color: #ef233c;
+  cursor: pointer;
+}

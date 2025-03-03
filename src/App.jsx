@@ -3,11 +3,8 @@ import { useState } from 'react'
 import { Routes, Route, useNavigate } from 'react-router-dom'
 
 // pages
-import Signup from './pages/Signup/Signup'
-import Login from './pages/Login/Login'
-import Landing from './pages/Landing/Landing'
+import Home from './pages/Home/Home'
 import Profiles from './pages/Profiles/Profiles'
-import ChangePassword from './pages/ChangePassword/ChangePassword'
 
 // components
 import NavBar from './components/NavBar/NavBar'
@@ -37,31 +34,7 @@ function App() {
     <>
       <NavBar user={user} handleLogout={handleLogout} />
       <Routes>
-        <Route path="/" element={<Landing user={user} />} />
-        <Route
-          path="/profiles"
-          element={
-            <ProtectedRoute user={user}>
-              <Profiles />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/auth/signup"
-          element={<Signup handleAuthEvt={handleAuthEvt} />}
-        />
-        <Route
-          path="/auth/login"
-          element={<Login handleAuthEvt={handleAuthEvt} />}
-        />
-        <Route
-          path="/auth/change-password"
-          element={
-            <ProtectedRoute user={user}>
-              <ChangePassword handleAuthEvt={handleAuthEvt} />
-            </ProtectedRoute>
-          }
-        />
+        <Route path="/" element={<Home user={user} />} />
       </Routes>
     </>
   )
