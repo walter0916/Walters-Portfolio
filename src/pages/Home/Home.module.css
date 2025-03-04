@@ -1,10 +1,19 @@
+.mainContainer {
+  background: linear-gradient(to right, #2b2d42, #8d99ae);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  height: fit-content;
+}
+
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  background: linear-gradient(to right, #2b2d42, #8d99ae);
+  height: 100vh;
   overflow: hidden;
   text-align: center;
   position: relative;
@@ -34,4 +43,94 @@
 
 span {
   color: #f7b801;
+}
+
+projectsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 50px;
+}
+
+.projectWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  width: 100%;
+}
+
+.projectContainer {
+  flex: 1;
+  max-width: 45%;
+}
+
+.aboutContainer {
+  flex: 1;
+  max-width: 45%;
+  color: #edf2f4;
+  font-size: 1.2rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+
+
+.projectContainer{
+  color: #edf2f4;
+  border-radius: 15px;
+  height: 23vw;
+  width: 20vw;
+  padding: 20px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.button {
+  --b: 3px;   
+  --s: .45em; 
+  --color: #f7b801;
+  
+  padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+  color: #edf2f4;
+  --_p: var(--s);
+  background:
+    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+  transition: .3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: .6em;
+  font-size: 23px;
+
+  border: 0;
+
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button:hover,
+.button:focus-visible{
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: .05em;
+}
+
+.button:active {
+  background: var(--color);
+  color: #fff;
+}
+
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
 }
