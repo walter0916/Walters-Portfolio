@@ -11,7 +11,7 @@ import xWingFlipped from '../../assets/xwing-Fighter-Flipped.png'
 
 const projects = [
   {
-    title: "Project 1",
+    title: "Stadium",
     description: "This is a description of Project 1. It's an amazing project that does XYZ.",
     images: [
       "https://picsum.photos/seed/project1-1/500/400",
@@ -20,7 +20,7 @@ const projects = [
     ]
   },
   {
-    title: "Project 2",
+    title: "Motiva Meadow",
     description: "An innovative project that improves efficiency.",
     images: [
       "https://picsum.photos/seed/project2-1/500/400",
@@ -29,7 +29,7 @@ const projects = [
     ]
   },
   {
-    title: "Project 3",
+    title: "Campus Connect",
     description: "A cutting-edge app designed to revolutionize user experience.",
     images: [
       "https://picsum.photos/seed/project3-1/500/400",
@@ -38,7 +38,7 @@ const projects = [
     ]
   },
   {
-    title: "Project 4",
+    title: "Jedi Collector",
     description: "Leveraging AI to deliver smart solutions for everyday problems.",
     images: [
       "https://picsum.photos/seed/project4-1/500/400",
@@ -88,7 +88,16 @@ const Home = () => {
         </motion.h2>
       </div>
 
+      <svg viewBox="0 0 1440 320" className={styles.wave}>
+        <path fill="#1a1b25" fillOpacity="1" d="M0,160L80,144C160,128,320,96,480,117.3C640,139,800,213,960,234.7C1120,256,1280,224,1360,208L1440,192V320H0Z"></path>
+      </svg>
+
       <div className={styles.projectsContainer}>
+        <div className={styles.portfolioHeader}>
+          <hr className={styles.line} />
+          <h1 className={styles.portfolioTitle}>Portfolio</h1>
+          <hr className={styles.line} />
+        </div>
   
         {projects.map((project, index) => (
           <div
