@@ -1,8 +1,53 @@
 // npm modules
 import { motion } from 'framer-motion'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Navigation, Pagination } from 'swiper/modules'
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
 import styles from './Home.module.css'
 import xWing from '../../assets/xwing-Fighter.png'
 import xWingFlipped from '../../assets/xwing-Fighter-Flipped.png'
+
+const projects = [
+  {
+    title: "Project 1",
+    description: "This is a description of Project 1. It's an amazing project that does XYZ.",
+    images: [
+      "https://picsum.photos/seed/project1-1/500/400",
+      "https://picsum.photos/seed/project1-2/500/400",
+      "https://picsum.photos/seed/project1-3/500/400"
+    ]
+  },
+  {
+    title: "Project 2",
+    description: "An innovative project that improves efficiency.",
+    images: [
+      "https://picsum.photos/seed/project2-1/500/400",
+      "https://picsum.photos/seed/project2-2/500/400",
+      "https://picsum.photos/seed/project2-3/500/400"
+    ]
+  },
+  {
+    title: "Project 3",
+    description: "A cutting-edge app designed to revolutionize user experience.",
+    images: [
+      "https://picsum.photos/seed/project3-1/500/400",
+      "https://picsum.photos/seed/project3-2/500/400",
+      "https://picsum.photos/seed/project3-3/500/400"
+    ]
+  },
+  {
+    title: "Project 4",
+    description: "Leveraging AI to deliver smart solutions for everyday problems.",
+    images: [
+      "https://picsum.photos/seed/project4-1/500/400",
+      "https://picsum.photos/seed/project4-2/500/400",
+      "https://picsum.photos/seed/project4-3/500/400"
+    ]
+  }
+]
+
 const Home = () => {
   return (
     <main className={styles.mainContainer}>
@@ -44,62 +89,41 @@ const Home = () => {
       </div>
 
       <div className={styles.projectsContainer}>
-        
-        <div className={styles.projectWrapper}>
-          <div className={styles.projectContainer}>
-            <img src="https://picsum.photos/seed/project1/500/400" alt="Project 1" className={styles.image}/>
-            <div className={styles.buttonContainer}>
-              <button className={styles.button}>Visit</button>
-              <button className={styles.button}>Code</button>
+  
+        {projects.map((project, index) => (
+          <div
+            key={index}
+            className={styles.projectWrapper}
+            style={{ flexDirection: index % 2 === 0 ? 'row' : 'row-reverse' }}
+          >
+            <div className={styles.projectContainer}>
+              <Swiper
+                modules={[Navigation, Pagination]}
+                navigation
+                pagination={{ clickable: true }}
+                spaceBetween={10}
+                slidesPerView={1}
+                loop={true} 
+                grabCursor={true} 
+                className={styles.swiper}
+              >
+                {project.images.map((image, imgIndex) => (
+                  <SwiperSlide key={imgIndex}>
+                    <img src={image} alt={`Screenshot ${imgIndex + 1}`} className={styles.image} />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+              <div className={styles.buttonContainer}>
+                <button className={styles.button}>Visit</button>
+                <button className={styles.button}>Code</button>
+              </div>
+            </div>
+            <div className={styles.aboutContainer}>
+              <h3>{project.title}</h3>
+              <p>{project.description}</p>
             </div>
           </div>
-          <div className={styles.aboutContainer}>
-            <h3>Project 1</h3>
-            <p>This is a description of Project 1. It's an amazing project that does XYZ.</p>
-          </div>
-        </div>
-
-        <div className={styles.projectWrapper} style={{ flexDirection: 'row-reverse' }}>
-          <div className={styles.projectContainer}>
-            <img src="https://picsum.photos/seed/project2/500/400" alt="Project 2" className={styles.image}/>
-            <div className={styles.buttonContainer}>
-              <button className={styles.button}>Visit</button>
-              <button className={styles.button}>Code</button>
-            </div>
-          </div>
-          <div className={styles.aboutContainer}>
-            <h3>Project 2</h3>
-            <p>This is a description of Project 2. It's an innovative project that improves efficiency.</p>
-          </div>
-        </div>
-
-        <div className={styles.projectWrapper}>
-          <div className={styles.projectContainer}>
-            <img src="https://picsum.photos/seed/project3/500/400" alt="Project 3" className={styles.image}/>
-            <div className={styles.buttonContainer}>
-              <button className={styles.button}>Visit</button>
-              <button className={styles.button}>Code</button>
-            </div>
-          </div>
-          <div className={styles.aboutContainer}>
-            <h3>Project 3</h3>
-            <p>Project 3 is a cutting-edge app designed to revolutionize user experience.</p>
-          </div>
-        </div>
-
-        <div className={styles.projectWrapper} style={{ flexDirection: 'row-reverse' }}>
-          <div className={styles.projectContainer}>
-            <img src="https://picsum.photos/seed/project4/500/400" alt="Project 4" className={styles.image}/>
-            <div className={styles.buttonContainer}>
-              <button className={styles.button}>Visit</button>
-              <button className={styles.button}>Code</button>
-            </div>
-          </div>
-          <div className={styles.aboutContainer}>
-            <h3>Project 4</h3>
-            <p>Project 4 leverages AI to deliver smart solutions for everyday problems.</p>
-          </div>
-        </div>
+        ))}
 
       </div>
     </main>
