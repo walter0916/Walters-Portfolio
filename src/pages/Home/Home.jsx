@@ -109,7 +109,7 @@ const Home = () => {
       </div>
 
       <svg viewBox="0 0 1440 320" className={styles.wave}>
-        <path fill="#1a1b25" fillOpacity="1" d="M0,160L80,144C160,128,320,96,480,117.3C640,139,800,213,960,234.7C1120,256,1280,224,1360,208L1440,192V320H0Z"></path>
+        <path fill="#4f3824" fillOpacity="1" d="M0,160L80,144C160,128,320,96,480,117.3C640,139,800,213,960,234.7C1120,256,1280,224,1360,208L1440,192V320H0Z"></path>
       </svg>
 
       <motion.div 
@@ -163,7 +163,7 @@ const Home = () => {
       </motion.div>
       
       <svg viewBox="0 0 1440 320" className={styles.wave2}>
-        <path fill="#f7b801" fillOpacity="1" d="M0,160L80,144C160,128,320,96,480,117.3C640,139,800,213,960,234.7C1120,256,1280,224,1360,208L1440,192V320H0Z"></path>
+        <path fill="#d1ca98" fillOpacity="1" d="M0,160L80,144C160,128,320,96,480,117.3C640,139,800,213,960,234.7C1120,256,1280,224,1360,208L1440,192V320H0Z"></path>
       </svg>
       <motion.div 
         className={styles.aboutSectionContainer}
@@ -172,6 +172,8 @@ const Home = () => {
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
       >
+        <div className={styles.imageContainer}>
+          <hr className={styles.line} />
 
         <motion.img 
           src={profilePic} 
@@ -179,6 +181,8 @@ const Home = () => {
           className={styles.profileImg}
           variants={slideVariants}
         />
+        <hr className={styles.line} />
+        </div>
 
         <motion.div 
           className={styles.aboutCard}

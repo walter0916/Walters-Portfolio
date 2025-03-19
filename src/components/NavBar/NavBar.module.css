@@ -1,11 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap');  
+
 .navContainer {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  background: linear-gradient(to right, #2b2d42, #8d99ae);
-  /* position: sticky; */
+  background: #f8f1e4;
   top: 0;
   z-index: 1000;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
 }
 
 .profileImg{
@@ -19,7 +22,7 @@
 .nameContainer {
   display: flex;
   align-items: center;
-  color: #edf2f4;
+  color: #37474f;
   font-weight: bolder;
   font-size: 24px;
 }
@@ -27,12 +30,12 @@
 .linksContainer {
   display: flex;
   align-items: center;
-  color: #edf2f4;
+  color: #37474f;
   font-size: 24px;
   font-weight: bolder;
 }
 
 .linksContainer ul:hover{
-  color: #f7b801;
+  color: #ff6f61;
   cursor: pointer;
 }
