@@ -8,6 +8,8 @@ import 'swiper/css/pagination'
 import styles from './Home.module.css'
 import xWing from '../../assets/xwing-Fighter.png'
 import xWingFlipped from '../../assets/xwing-Fighter-Flipped.png'
+import 'font-awesome/css/font-awesome.min.css'
+import profilePic from '../../assets/profilePic.jpeg'
 
 const projects = [
   {
@@ -134,6 +136,93 @@ const Home = () => {
           </div>
         ))}
 
+      </div>
+      
+      <svg viewBox="0 0 1440 320" className={styles.wave2}>
+        <path fill="#f7b801" fillOpacity="1" d="M0,160L80,144C160,128,320,96,480,117.3C640,139,800,213,960,234.7C1120,256,1280,224,1360,208L1440,192V320H0Z"></path>
+      </svg>
+      <div className={styles.aboutSectionContainer}>
+        <img src={profilePic} alt="" className={styles.profileImg}/>
+        <div className={styles.aboutCard}>
+          <h2 className={styles.nameTitle}>Walter Guerra</h2>
+          <p className={styles.jobDescription}>Full Stack Developer</p>
+          <div className={styles.statsContainer}>
+            
+            <div className={styles.statItem}>
+              <p className={styles.statValue}>15</p>
+              <p>Projects</p>
+            </div>
+            <div className={styles.statItem}>
+              <p className={styles.statValue}>2</p>
+              <p>Years of Experience</p>
+            </div>
+
+          </div>
+          <div className={styles.skillsContainer}>
+            <div className={styles.iconWrapper}>
+              <i className="devicon-javascript-plain colored"></i>
+              <p className={styles.iconLabel}>JavaScript</p>
+            </div>
+
+            <div className={styles.iconWrapper}>
+              <i className="devicon-python-plain colored"></i>
+              <p className={styles.iconLabel}>Python</p>
+            </div>
+
+            <div className={styles.iconWrapper}>
+              <i className="devicon-django-plain colored"></i>
+              <p className={styles.iconLabel}>Django</p>
+            </div>
+
+            <div className={styles.iconWrapper}>
+              <i className="devicon-nodejs-plain colored"></i>
+              <p className={styles.iconLabel}>Node.js</p>
+            </div>
+
+            <div className={styles.iconWrapper}>
+              <i className="devicon-mongodb-plain colored"></i>
+              <p className={styles.iconLabel}>MongoDB</p>
+            </div>
+
+            <div className={styles.iconWrapper}>
+              <i className="devicon-tailwindcss-plain colored"></i>
+              <p className={styles.iconLabel}>Tailwind CSS</p>
+            </div>
+
+            <div className={styles.iconWrapper}>
+              <i className="devicon-docker-plain colored"></i>
+              <p className={styles.iconLabel}>Docker</p>
+            </div>
+
+            <div className={styles.iconWrapper}>
+              <i className="devicon-github-original"></i>
+              <p className={styles.iconLabel}>GitHub</p>
+            </div>
+
+            <div className={styles.iconWrapper}>
+              <i className="devicon-express-original colored"></i>
+              <p className={styles.iconLabel}>Express</p>
+            </div>
+
+            <div className={styles.iconWrapper}>
+              <i className="devicon-react-original colored"></i>
+              <p className={styles.iconLabel}>React</p>
+            </div>
+  
+          </div>
+
+          <div className={styles.iconContainer}>
+            <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+              <i className="fa fa-github" style={{ fontSize: "2rem" }}></i>
+            </a>
+            <a href="https://www.linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
+              <i className="fa fa-linkedin" style={{ fontSize: "2rem" }}></i>
+            </a>
+            <a href="https://www.instagram.com/yourusername" target="_blank" rel="noopener noreferrer">
+              <i className="fa fa-instagram" style={{ fontSize: "2rem" }}></i>
+            </a>
+          </div>
+        </div>
       </div>
     </main>
   )
